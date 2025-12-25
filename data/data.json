@@ -16,20 +16,7 @@
   "versets": [],
   "livres": [],
   "videos": [],
-  "evenements": [
-    {
-      "titre": "Beta",
-      "date": "2025-12-18",
-      "heure": "18:45",
-      "lieu": "none",
-      "type": "conference",
-      "statut": "termine",
-      "description": "none",
-      "image": "",
-      "id": 1,
-      "createdAt": "2025-12-25T13:41:59.915Z"
-    }
-  ],
+  "evenements": [],
   "temoignages": [
     {
       "id": 1,
