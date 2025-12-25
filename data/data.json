@@ -33,47 +33,7 @@
       "image": "assets/images/bible-default.jpg"
     }
   ],
-  "livres": [
-    {
-      "id": 1,
-      "titre": "Les Mystères du Royaume",
-      "auteur": "Pasteur Jean-Marie",
-      "description": "Découvrez les secrets cachés de la Parole de Dieu. Un voyage spirituel à travers les enseignements profonds du Royaume des cieux.",
-      "image": "assets/images/book-placeholder.svg",
-      "pdfUrl": "",
-      "nombrePages": 250,
-      "theme": "Théologie",
-      "langue": "Français",
-      "gratuit": true,
-      "prix": 0
-    },
-    {
-      "id": 2,
-      "titre": "La Femme selon le Cœur de Dieu",
-      "auteur": "Équipe Filles2SaraY",
-      "description": "Un guide pour les femmes qui désirent retrouver leur véritable identité en Christ et vivre selon les principes bibliques.",
-      "image": "assets/images/book-placeholder.svg",
-      "pdfUrl": "",
-      "nombrePages": 180,
-      "theme": "Vie Chrétienne",
-      "langue": "Français",
-      "gratuit": true,
-      "prix": 0
-    },
-    {
-      "id": 3,
-      "titre": "Préparation au Retour du Seigneur",
-      "auteur": "Centre Missionnaire Luchnos",
-      "description": "Enseignements sur les signes des temps et comment se préparer spirituellement pour le retour de Yéhoshoua.",
-      "image": "assets/images/book-placeholder.svg",
-      "pdfUrl": "",
-      "nombrePages": 200,
-      "theme": "Eschatologie",
-      "langue": "Français",
-      "gratuit": true,
-      "prix": 0
-    }
-  ],
+  "livres": [],
   "videos": [
     {
       "id": 1,
