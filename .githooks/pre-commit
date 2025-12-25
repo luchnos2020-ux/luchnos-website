@@ -1,0 +1,20 @@
+#!/bin/sh
+# Pre-commit hook: Validate UTF-8 encoding
+# Install: git config core.hooksPath .githooks
+
+echo "🔍 Checking UTF-8 encoding..."
+
+# Check if Node.js is available
+if command -v node >/dev/null 2>&1; then
+  node scripts/validate-encoding.js
+  if [ $? -ne 0 ]; then
+    echo ""
+    echo "❌ Commit blocked: Fix encoding issues before committing."
+    echo ""
+    exit 1
+  fi
+else
+  echo "⚠️  Node.js not found - skipping encoding validation"
+fi
+
+exit 0

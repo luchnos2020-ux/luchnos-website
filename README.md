@@ -47,6 +47,26 @@ luchnos-website/
 1. Creez une branche `gh-pages` contenant uniquement le contenu du dossier `luchnos-website`
 2. Dans les parametres GitHub Pages, selectionnez la branche `gh-pages`
 
+## Configuration pour les collaborateurs
+
+### Encodage UTF-8 (OBLIGATOIRE)
+
+Ce projet utilise UTF-8 pour supporter les caractères français. **Tous les collaborateurs doivent:**
+
+1. **Activer le hook de validation:**
+   ```bash
+   git config core.hooksPath .githooks
+   ```
+
+2. **Vérifier l'encodage avant de commit:**
+   ```bash
+   node scripts/validate-encoding.js
+   ```
+
+3. **Configurer leur éditeur pour UTF-8** (VS Code lit automatiquement `.editorconfig`)
+
+Si vous voyez `Ã©` au lieu de `é`, le fichier n'est pas en UTF-8. Voir `CONTRIBUTING.md` pour plus de détails.
+
 ## Developpement Local
 
 Pour tester le site localement, utilisez un serveur HTTP simple:

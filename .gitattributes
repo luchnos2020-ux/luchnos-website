@@ -1,0 +1,30 @@
+# Force UTF-8 encoding for all text files
+* text=auto encoding=UTF-8
+
+# Explicitly set encoding for common file types
+*.html text encoding=UTF-8
+*.css text encoding=UTF-8
+*.js text encoding=UTF-8
+*.json text encoding=UTF-8
+*.md text encoding=UTF-8
+*.txt text encoding=UTF-8
+*.xml text encoding=UTF-8
+*.svg text encoding=UTF-8
+
+# Normalize line endings to LF
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+
+# Binary files - do not modify
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.pdf binary

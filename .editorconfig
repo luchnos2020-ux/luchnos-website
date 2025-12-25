@@ -1,0 +1,43 @@
+# EditorConfig - Enforce consistent coding styles
+# https://editorconfig.org
+
+root = true
+
+# All files - UTF-8 encoding
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# HTML files
+[*.html]
+charset = utf-8
+indent_size = 2
+
+# CSS files
+[*.css]
+charset = utf-8
+indent_size = 2
+
+# JavaScript files
+[*.js]
+charset = utf-8
+indent_size = 2
+
+# JSON files
+[*.json]
+charset = utf-8
+indent_size = 2
+insert_final_newline = true
+
+# Markdown files
+[*.md]
+charset = utf-8
+trim_trailing_whitespace = false
+
+# SVG files
+[*.svg]
+charset = utf-8
