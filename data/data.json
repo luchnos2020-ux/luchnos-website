@@ -15,41 +15,7 @@
   },
   "versets": [],
   "livres": [],
-  "videos": [
-    {
-      "id": 1,
-      "titre": "Enseignement: La Prière Efficace",
-      "description": "Découvrez les clés d'une vie de prière puissante et efficace selon les Écritures.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-      "categorie": "Enseignement",
-      "auteur": "Luchnos Lampe Allumée",
-      "datePublication": "2024-12-01"
-    },
-    {
-      "id": 2,
-      "titre": "Louange et Adoration - Moment de Gloire",
-      "description": "Un temps de louange et d'adoration pour élever nos cœurs vers le Seigneur.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-      "categorie": "Louange",
-      "auteur": "Luchnos Lampe Allumée",
-      "datePublication": "2024-11-15"
-    },
-    {
-      "id": 3,
-      "titre": "Témoignage: Ma Transformation en Christ",
-      "description": "Un témoignage puissant de transformation par la grâce de Dieu.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-      "categorie": "Témoignage",
-      "auteur": "Luchnos Lampe Allumée",
-      "datePublication": "2024-10-20"
-    }
-  ],
+  "videos": [],
   "evenements": [],
   "temoignages": [
     {
