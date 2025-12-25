@@ -1,7 +1,7 @@
 {
   "site": {
-    "name": "Lampe Allumée (Luchnos)",
-    "tagline": "Présenter Yéhoshoua car IL revient",
+    "name": "Lampe AllumÃ©e (Luchnos)",
+    "tagline": "PrÃ©senter YÃ©hoshoua car IL revient",
     "email": "Luchnos2020@gmail.com",
     "emailSecondary": "fillesdesaray@gmail.com",
     "phone": "+241 62 56 29 10",
@@ -16,19 +16,19 @@
   "versets": [
     {
       "id": 1,
-      "texte": "Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle.",
+      "texte": "Car Dieu a tant aimÃ© le monde qu'il a donnÃ© son Fils unique, afin que quiconque croit en lui ne pÃ©risse point, mais qu'il ait la vie Ã©ternelle.",
       "reference": "Jean 3:16",
       "image": "assets/images/bible-default.jpg"
     },
     {
       "id": 2,
-      "texte": "Jésus lui dit: Je suis le chemin, la vérité, et la vie. Nul ne vient au Père que par moi.",
+      "texte": "JÃ©sus lui dit: Je suis le chemin, la vÃ©ritÃ©, et la vie. Nul ne vient au PÃ¨re que par moi.",
       "reference": "Jean 14:6",
       "image": "assets/images/bible-default.jpg"
     },
     {
       "id": 3,
-      "texte": "Que votre cœur ne se trouble point. Croyez en Dieu, et croyez en moi.",
+      "texte": "Que votre cÅur ne se trouble point. Croyez en Dieu, et croyez en moi.",
       "reference": "Jean 14:1",
       "image": "assets/images/bible-default.jpg"
     }
@@ -36,40 +36,40 @@
   "livres": [
     {
       "id": 1,
-      "titre": "Les Mystères du Royaume",
+      "titre": "Les MystÃ¨res du Royaume",
       "auteur": "Pasteur Jean-Marie",
-      "description": "Découvrez les secrets cachés de la Parole de Dieu. Un voyage spirituel à travers les enseignements profonds du Royaume des cieux.",
+      "description": "DÃ©couvrez les secrets cachÃ©s de la Parole de Dieu. Un voyage spirituel Ã  travers les enseignements profonds du Royaume des cieux.",
       "image": "assets/images/book-placeholder.svg",
       "pdfUrl": "",
       "nombrePages": 250,
-      "theme": "Théologie",
-      "langue": "Français",
+      "theme": "ThÃ©ologie",
+      "langue": "FranÃ§ais",
       "gratuit": true,
       "prix": 0
     },
     {
       "id": 2,
       "titre": "La Femme selon le Coeur de Dieu",
-      "auteur": "Équipe Filles2SaraY",
-      "description": "Un guide pour les femmes qui désirent retrouver leur véritable identité en Christ et vivre selon les principes bibliques.",
+      "auteur": "Ãquipe Filles2SaraY",
+      "description": "Un guide pour les femmes qui dÃ©sirent retrouver leur vÃ©ritable identitÃ© en Christ et vivre selon les principes bibliques.",
       "image": "assets/images/book-placeholder.svg",
       "pdfUrl": "",
       "nombrePages": 180,
-      "theme": "Vie Chrétienne",
-      "langue": "Français",
+      "theme": "Vie ChrÃ©tienne",
+      "langue": "FranÃ§ais",
       "gratuit": true,
       "prix": 0
     },
     {
       "id": 3,
-      "titre": "Préparation au Retour du Seigneur",
+      "titre": "PrÃ©paration au Retour du Seigneur",
       "auteur": "Centre Missionnaire Luchnos",
-      "description": "Enseignements sur les signes des temps et comment se préparer spirituellement pour le retour de Yéhoshoua.",
+      "description": "Enseignements sur les signes des temps et comment se prÃ©parer spirituellement pour le retour de YÃ©hoshoua.",
       "image": "assets/images/book-placeholder.svg",
       "pdfUrl": "",
       "nombrePages": 200,
       "theme": "Eschatologie",
-      "langue": "Français",
+      "langue": "FranÃ§ais",
       "gratuit": true,
       "prix": 0
     }
@@ -77,54 +77,43 @@
   "videos": [
     {
       "id": 1,
-      "titre": "Enseignement: La Prière Efficace",
-      "description": "Découvrez les clés d'une vie de prière puissante et efficace selon les Écritures.",
+      "titre": "Enseignement: La PriÃ¨re Efficace",
+      "description": "DÃ©couvrez les clÃ©s d'une vie de priÃ¨re puissante et efficace selon les Ãcritures.",
       "youtubeId": "dQw4w9WgXcQ",
       "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
       "categorie": "Enseignement",
-      "auteur": "Luchnos Lampe Allumée",
+      "auteur": "Luchnos Lampe AllumÃ©e",
       "datePublication": "2024-12-01"
     },
     {
       "id": 2,
       "titre": "Louange et Adoration - Moment de Gloire",
-      "description": "Un temps de louange et d'adoration pour élever nos cœurs vers le Seigneur.",
+      "description": "Un temps de louange et d'adoration pour Ã©lever nos cÅurs vers le Seigneur.",
       "youtubeId": "dQw4w9WgXcQ",
       "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
       "categorie": "Louange",
-      "auteur": "Luchnos Lampe Allumée",
+      "auteur": "Luchnos Lampe AllumÃ©e",
       "datePublication": "2024-11-15"
     },
     {
       "id": 3,
-      "titre": "Témoignage: Ma Transformation en Christ",
-      "description": "Un témoignage puissant de transformation par la grâce de Dieu.",
+      "titre": "TÃ©moignage: Ma Transformation en Christ",
+      "description": "Un tÃ©moignage puissant de transformation par la grÃ¢ce de Dieu.",
       "youtubeId": "dQw4w9WgXcQ",
       "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-      "categorie": "Témoignage",
-      "auteur": "Luchnos Lampe Allumée",
+      "categorie": "TÃ©moignage",
+      "auteur": "Luchnos Lampe AllumÃ©e",
       "datePublication": "2024-10-20"
     }
   ],
   "evenements": [
     {
-      "id": 1,
-      "titre": "Conférence Prophétique 2025",
-      "description": "Une soirée de révélation et d'enseignement sur les temps de la fin. Venez découvrir ce que le Seigneur a à dire pour cette génération.",
-      "date": "2025-02-15",
-      "heure": "19:00",
-      "lieu": "Libreville, Gabon",
-      "type": "conference",
-      "statut": "a_venir",
-      "image": "assets/images/event-placeholder.svg"
-    },
-    {
       "id": 2,
-      "titre": "Séminaire de Formation Biblique",
-      "description": "Formation intensive sur l'évangélisation moderne et l'équipement des disciples pour le service.",
+      "titre": "SÃ©minaire de Formation Biblique",
+      "description": "Formation intensive sur l'Ã©vangÃ©lisation moderne et l'Ã©quipement des disciples pour le service.",
       "date": "2025-03-10",
       "heure": "10:00",
       "lieu": "Johannesburg, Afrique du Sud",
@@ -135,7 +124,7 @@
     {
       "id": 3,
       "titre": "Retraite Filles2SaraY",
-      "description": "Un temps de ressourcement et de restauration pour les femmes. Redécouvrez votre identité en Christ.",
+      "description": "Un temps de ressourcement et de restauration pour les femmes. RedÃ©couvrez votre identitÃ© en Christ.",
       "date": "2025-04-05",
       "heure": "09:00",
       "lieu": "Kinshasa, RDC",
@@ -148,17 +137,17 @@
     {
       "id": 1,
       "nom": "Marie D.",
-      "temoignage": "Les enseignements de Luchnos ont transformé ma compréhension de la Parole de Dieu. Je suis tellement reconnaissante pour ce ministère."
+      "temoignage": "Les enseignements de Luchnos ont transformÃ© ma comprÃ©hension de la Parole de Dieu. Je suis tellement reconnaissante pour ce ministÃ¨re."
     },
     {
       "id": 2,
       "nom": "Pierre M.",
-      "temoignage": "Une source d'inspiration constante pour ma marche avec le Seigneur. Les formations m'ont équipé pour mieux servir."
+      "temoignage": "Une source d'inspiration constante pour ma marche avec le Seigneur. Les formations m'ont Ã©quipÃ© pour mieux servir."
     },
     {
       "id": 3,
       "nom": "Sarah L.",
-      "temoignage": "Les livres gratuits sont une bénédiction pour notre communauté. Merci de rendre ces ressources accessibles à tous."
+      "temoignage": "Les livres gratuits sont une bÃ©nÃ©diction pour notre communautÃ©. Merci de rendre ces ressources accessibles Ã  tous."
     }
   ]
 }
