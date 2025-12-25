@@ -17,16 +17,47 @@ async function loadBooks() {
   const data = await Luchnos.loadData();
   if (!data || !data.livres) {
     document.getElementById('books-container').innerHTML = '<p class="text-center" style="grid-column: 1/-1; color: var(--slate);">Aucun livre disponible</p>';
+    updateResultsCount(0);
     return;
   }
 
   allBooks = data.livres;
+
+  // Populate theme filter dynamically
+  const themes = [...new Set(allBooks.map(b => b.theme).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'fr'));
+  const themeFilter = document.getElementById('theme-filter');
+  themes.forEach(theme => {
+    const option = document.createElement('option');
+    option.value = theme;
+    option.textContent = theme;
+    themeFilter.appendChild(option);
+  });
+
+  // Populate langue filter dynamically
+  const langues = [...new Set(allBooks.map(b => b.langue).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'fr'));
+  const langueFilter = document.getElementById('langue-filter');
+  langues.forEach(langue => {
+    const option = document.createElement('option');
+    option.value = langue;
+    option.textContent = langue;
+    langueFilter.appendChild(option);
+  });
+
   renderBooks(allBooks);
+}
+
+function updateResultsCount(count) {
+  const resultsCount = document.getElementById('results-count');
+  if (resultsCount) {
+    resultsCount.textContent = `${count} livre(s) trouvé(s)`;
+  }
 }
 
 function renderBooks(books) {
   const container = document.getElementById('books-container');
   const noResults = document.getElementById('no-results');
+
+  updateResultsCount(books.length);
 
   if (books.length === 0) {
     container.innerHTML = '';
@@ -112,6 +143,8 @@ function openBookModal(bookId) {
 function initFilters() {
   const searchInput = document.getElementById('search-input');
   const themeFilter = document.getElementById('theme-filter');
+  const langueFilter = document.getElementById('langue-filter');
+  const auteurFilter = document.getElementById('auteur-filter');
   const sortFilter = document.getElementById('sort-filter');
 
   const applyFilters = Luchnos.debounce(() => {
@@ -130,7 +163,22 @@ function initFilters() {
     // Theme filter
     const theme = themeFilter.value;
     if (theme) {
-      filtered = filtered.filter(book => book.theme === theme);
+      filtered = filtered.filter(book =>
+        book.theme?.toLowerCase().includes(theme.toLowerCase()) ||
+        book.categorie?.toLowerCase().includes(theme.toLowerCase())
+      );
+    }
+
+    // Langue filter
+    const langue = langueFilter.value;
+    if (langue) {
+      filtered = filtered.filter(book => book.langue?.toLowerCase() === langue.toLowerCase());
+    }
+
+    // Auteur filter
+    const auteur = auteurFilter.value.toLowerCase().trim();
+    if (auteur) {
+      filtered = filtered.filter(book => book.auteur?.toLowerCase().includes(auteur));
     }
 
     // Sort
@@ -155,5 +203,7 @@ function initFilters() {
 
   searchInput.addEventListener('input', applyFilters);
   themeFilter.addEventListener('change', applyFilters);
+  langueFilter.addEventListener('change', applyFilters);
+  auteurFilter.addEventListener('input', applyFilters);
   sortFilter.addEventListener('change', applyFilters);
 }

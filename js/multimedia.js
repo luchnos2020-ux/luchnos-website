@@ -21,6 +21,37 @@ async function loadVideos() {
   }
 
   allVideos = data.videos;
+
+  // Populate theme filter dynamically
+  const themes = [...new Set(allVideos.map(v => v.categorie).filter(Boolean))].sort();
+  const themeFilter = document.getElementById('theme-filter');
+  themes.forEach(theme => {
+    const option = document.createElement('option');
+    option.value = theme;
+    option.textContent = theme;
+    themeFilter.appendChild(option);
+  });
+
+  // Populate auteur filter dynamically
+  const auteurs = [...new Set(allVideos.map(v => v.auteur).filter(Boolean))].sort();
+  const auteurFilter = document.getElementById('auteur-filter');
+  auteurs.forEach(auteur => {
+    const option = document.createElement('option');
+    option.value = auteur;
+    option.textContent = auteur;
+    auteurFilter.appendChild(option);
+  });
+
+  // Populate annee filter dynamically
+  const annees = [...new Set(allVideos.map(v => v.anneePublication || (v.datePublication ? new Date(v.datePublication).getFullYear() : null)).filter(Boolean))].sort((a, b) => b - a);
+  const anneeFilter = document.getElementById('annee-filter');
+  annees.forEach(annee => {
+    const option = document.createElement('option');
+    option.value = annee;
+    option.textContent = annee;
+    anneeFilter.appendChild(option);
+  });
+
   renderVideos(allVideos);
 }
 
@@ -61,7 +92,9 @@ function renderVideos(videos) {
 
 function initFilters() {
   const searchInput = document.getElementById('search-input');
-  const categoryFilter = document.getElementById('category-filter');
+  const themeFilter = document.getElementById('theme-filter');
+  const auteurFilter = document.getElementById('auteur-filter');
+  const anneeFilter = document.getElementById('annee-filter');
   const sortFilter = document.getElementById('sort-filter');
 
   const applyFilters = Luchnos.debounce(() => {
@@ -72,15 +105,29 @@ function initFilters() {
     if (searchTerm) {
       filtered = filtered.filter(video =>
         video.titre.toLowerCase().includes(searchTerm) ||
-        video.description.toLowerCase().includes(searchTerm) ||
-        video.auteur.toLowerCase().includes(searchTerm)
+        video.description?.toLowerCase().includes(searchTerm)
       );
     }
 
-    // Category filter
-    const category = categoryFilter.value;
-    if (category) {
-      filtered = filtered.filter(video => video.categorie === category);
+    // Theme filter
+    const theme = themeFilter.value;
+    if (theme) {
+      filtered = filtered.filter(video => video.categorie === theme);
+    }
+
+    // Auteur filter
+    const auteur = auteurFilter.value;
+    if (auteur) {
+      filtered = filtered.filter(video => video.auteur === auteur);
+    }
+
+    // Annee filter
+    const annee = anneeFilter.value;
+    if (annee) {
+      filtered = filtered.filter(video => {
+        const videoYear = video.anneePublication || (video.datePublication ? new Date(video.datePublication).getFullYear() : null);
+        return videoYear == annee;
+      });
     }
 
     // Sort
@@ -89,12 +136,16 @@ function initFilters() {
       filtered.sort((a, b) => new Date(b.datePublication) - new Date(a.datePublication));
     } else if (sort === 'oldest') {
       filtered.sort((a, b) => new Date(a.datePublication) - new Date(b.datePublication));
+    } else if (sort === 'views') {
+      filtered.sort((a, b) => (b.vues || 0) - (a.vues || 0));
     }
 
     renderVideos(filtered);
   }, 300);
 
   searchInput.addEventListener('input', applyFilters);
-  categoryFilter.addEventListener('change', applyFilters);
+  themeFilter.addEventListener('change', applyFilters);
+  auteurFilter.addEventListener('change', applyFilters);
+  anneeFilter.addEventListener('change', applyFilters);
   sortFilter.addEventListener('change', applyFilters);
 }

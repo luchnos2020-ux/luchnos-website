@@ -15,36 +15,51 @@
 </head>
 <body>
   <!-- Hero Section -->
-  <section class="hero" style="min-height: 350px;">
+  <section class="hero" style="min-height: 400px;">
     <div class="hero-content">
-      <div style="display: inline-flex; align-items: center; justify-content: center; width: 5rem; height: 5rem; background: rgba(255, 193, 0, 0.2); border-radius: 50%; margin-bottom: 1.5rem;">
-        <svg width="40" height="40" fill="var(--gold)" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 6rem; height: 6rem; background: rgba(255, 193, 0, 0.2); border-radius: 50%; margin-bottom: 1.5rem;">
+        <svg width="48" height="48" fill="var(--gold)" viewBox="0 0 24 24" class="animate-pulse"><path d="M8 5v14l11-7z"/></svg>
       </div>
-      <h1 style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">Luchnos Multimédia</h1>
-      <p style="color: var(--slate-200); font-size: 1.25rem;">Enseignements vidéo pour votre édification spirituelle</p>
+      <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem;">
+        <span style="color: var(--gold);">Luchnos</span>
+        <span style="color: white;"> Multimédia</span>
+      </h1>
+      <p style="color: var(--slate-200); font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Enseignements et contenus spirituels enrichissants</p>
     </div>
   </section>
 
   <!-- Filters Section -->
   <section class="section section-light" style="padding: 2rem 0;">
     <div class="container-custom">
+      <!-- Recherche -->
+      <div class="filters" style="margin-bottom: 1rem;">
+        <div class="filter-group" style="flex: 1;">
+          <input type="text" id="search-input" class="search-input" placeholder="Rechercher par titre...">
+        </div>
+      </div>
+
+      <!-- Filtres -->
       <div class="filters">
-        <div class="filter-group" style="flex: 2;">
-          <input type="text" id="search-input" class="search-input" placeholder="Rechercher une vidéo...">
+        <div class="filter-group">
+          <select id="theme-filter" class="form-select">
+            <option value="">Tous les thèmes</option>
+          </select>
         </div>
         <div class="filter-group">
-          <select id="category-filter" class="form-select">
-            <option value="">Toutes les catégories</option>
-            <option value="Enseignement">Enseignement</option>
-            <option value="Louange">Louange</option>
-            <option value="Témoignage">Témoignage</option>
-            <option value="Prière">Prière</option>
+          <select id="auteur-filter" class="form-select">
+            <option value="">Tous les auteurs</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <select id="annee-filter" class="form-select">
+            <option value="">Toutes les années</option>
           </select>
         </div>
         <div class="filter-group">
           <select id="sort-filter" class="form-select">
-            <option value="recent">Plus récent</option>
-            <option value="oldest">Plus ancien</option>
+            <option value="recent">Plus récentes</option>
+            <option value="oldest">Plus anciennes</option>
+            <option value="views">Plus populaires</option>
           </select>
         </div>
       </div>
@@ -70,16 +85,15 @@
   </section>
 
   <!-- YouTube Subscribe Section -->
-  <section class="section section-dark">
+  <section class="section" style="background: var(--primary); padding: 4rem 0;">
     <div class="container-custom text-center">
-      <svg width="64" height="64" fill="var(--red-500)" viewBox="0 0 24 24" style="margin: 0 auto 1.5rem;"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"/></svg>
-      <h2 style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 1rem;">Abonnez-vous à notre chaîne YouTube</h2>
-      <p style="color: var(--slate-200); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-        Ne manquez aucun de nos enseignements et vidéos. Abonnez-vous pour être notifié des nouvelles publications.
+      <h2 style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 1rem;">Abonnez-vous à Notre Chaîne</h2>
+      <p style="color: var(--slate-200); font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Ne manquez aucun de nos contenus. Abonnez-vous et activez la cloche de notification.
       </p>
-      <a href="https://youtube.com/@luchnoslampeallumee" target="_blank" class="btn btn-primary btn-lg btn-round" style="background: var(--red-500);">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.5rem;"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="var(--red-500)"/></svg>
-        S'abonner
+      <a href="https://youtube.com/@luchnoslampeallumee?si=P7dIHkQ-0sQNR-lx" target="_blank" class="btn btn-lg btn-round" style="background: #DC2626; color: white; display: inline-flex; align-items: center; gap: 0.75rem; font-size: 1.125rem;">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#DC2626"/></svg>
+        S'abonner sur YouTube
       </a>
     </div>
   </section>

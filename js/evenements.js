@@ -7,7 +7,7 @@
 const EVENT_PLACEHOLDER = "assets/images/event-placeholder.svg";
 
 let allEvents = [];
-let currentStatus = 'all';
+let currentStatus = 'a_venir';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await loadEvents();
@@ -152,6 +152,14 @@ function initFilters() {
 function applyAllFilters() {
   const searchInput = document.getElementById('search-input');
   const typeFilter = document.getElementById('type-filter');
+  const pastEventsMessage = document.getElementById('past-events-message');
+
+  // Show/hide past events message
+  if (currentStatus === 'termine') {
+    pastEventsMessage.classList.remove('hidden');
+  } else {
+    pastEventsMessage.classList.add('hidden');
+  }
 
   let filtered = [...allEvents];
 
