@@ -163,6 +163,44 @@ button {
   line-height: 1.75;
 }
 
+/* Max width utilities to match Tailwind */
+.max-w-4xl {
+  max-width: 56rem; /* 896px */
+}
+
+.max-w-5xl {
+  max-width: 64rem; /* 1024px */
+}
+
+.max-w-6xl {
+  max-width: 72rem; /* 1152px */
+}
+
+.max-w-7xl {
+  max-width: 80rem; /* 1280px */
+}
+
+.max-w-3xl {
+  max-width: 48rem; /* 768px */
+}
+
+.max-w-2xl {
+  max-width: 42rem; /* 672px */
+}
+
+/* Margin auto for centering */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Margin bottom variants */
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mb-16 { margin-bottom: 4rem; }
+
 /* ========== TYPOGRAPHY ========== */
 .section-title {
   font-size: 1.875rem;
@@ -518,13 +556,20 @@ button {
 /* ========== HERO SECTION ========== */
 .hero {
   position: relative;
-  min-height: 500px;
+  height: 400px; /* h-[400px] - exact match to reference */
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--gradient-primary);
   overflow: hidden;
-  padding-top: 5rem;
+  padding-top: 5rem; /* pt-20 for header offset */
+}
+
+/* Taller hero variant for presentation page */
+.hero.hero-tall {
+  height: 500px;
+  min-height: 500px;
 }
 
 .hero-bg {
@@ -566,7 +611,24 @@ button {
 
 /* ========== SECTIONS ========== */
 .section {
-  padding: 5rem 0;
+  padding: 5rem 0; /* py-20 */
+}
+
+/* Section padding variants to match Tailwind */
+.section.py-20 {
+  padding: 5rem 0; /* 80px */
+}
+
+.section.py-16 {
+  padding: 4rem 0; /* 64px */
+}
+
+.section.py-12 {
+  padding: 3rem 0; /* 48px */
+}
+
+.section.py-8 {
+  padding: 2rem 0; /* 32px */
 }
 
 .section-white {
@@ -587,10 +649,35 @@ button {
   color: white;
 }
 
+/* Sticky filter section for multimedia/edition */
+.section-filters {
+  padding: 2rem 0;
+  background-color: white;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 5rem; /* top-20 = 80px */
+  z-index: 40;
+}
+
 /* ========== GRIDS ========== */
 .grid {
   display: grid;
   gap: 2rem;
+}
+
+/* gap-6 (1.5rem) variant */
+.grid.gap-6 {
+  gap: 1.5rem;
+}
+
+/* gap-8 (2rem) - default */
+.grid.gap-8 {
+  gap: 2rem;
+}
+
+/* gap-12 (3rem) variant */
+.grid.gap-12 {
+  gap: 3rem;
 }
 
 .grid-2 {
@@ -599,6 +686,17 @@ button {
 
 @media (min-width: 768px) {
   .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* lg:grid-cols-2 variant */
+.grid-2-lg {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .grid-2-lg {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -619,8 +717,9 @@ button {
   }
 }
 
+/* grid-cols-1 md:grid-cols-2 lg:grid-cols-4 (for home ministry cards) */
 .grid-4 {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
@@ -631,6 +730,29 @@ button {
 
 @media (min-width: 1024px) {
   .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 (for books) */
+.grid-books {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid-books {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-books {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-books {
     grid-template-columns: repeat(4, 1fr);
   }
 }
