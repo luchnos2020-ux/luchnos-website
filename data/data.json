@@ -109,41 +109,7 @@
       "datePublication": "2024-10-20"
     }
   ],
-  "evenements": [
-    {
-      "id": 1,
-      "titre": "Conférence Prophétique 2025",
-      "description": "Une soirée de révélation et d'enseignement sur les temps de la fin. Venez découvrir ce que le Seigneur a à dire pour cette génération.",
-      "date": "2025-02-15",
-      "heure": "19:00",
-      "lieu": "Libreville, Gabon",
-      "type": "conference",
-      "statut": "a_venir",
-      "image": "assets/images/event-placeholder.svg"
-    },
-    {
-      "id": 2,
-      "titre": "Séminaire de Formation Biblique",
-      "description": "Formation intensive sur l'évangélisation moderne et l'équipement des disciples pour le service.",
-      "date": "2025-03-10",
-      "heure": "10:00",
-      "lieu": "Johannesburg, Afrique du Sud",
-      "type": "seminaire",
-      "statut": "a_venir",
-      "image": "assets/images/event-placeholder.svg"
-    },
-    {
-      "id": 3,
-      "titre": "Retraite Filles2SaraY",
-      "description": "Un temps de ressourcement et de restauration pour les femmes. Redécouvrez votre identité en Christ.",
-      "date": "2025-04-05",
-      "heure": "09:00",
-      "lieu": "Kinshasa, RDC",
-      "type": "seminaire",
-      "statut": "a_venir",
-      "image": "assets/images/event-placeholder.svg"
-    }
-  ],
+  "evenements": [],
   "temoignages": [
     {
       "id": 1,
