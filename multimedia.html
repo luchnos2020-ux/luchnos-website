@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luchnos Multimédia - Enseignements vidéo et audio pour votre édification spirituelle.">
+  <title>Multimédia | Lampe Allumée (Luchnos)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 350px;">
+    <div class="hero-content">
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 5rem; height: 5rem; background: rgba(255, 193, 0, 0.2); border-radius: 50%; margin-bottom: 1.5rem;">
+        <svg width="40" height="40" fill="var(--gold)" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+      </div>
+      <h1 style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">Luchnos Multimédia</h1>
+      <p style="color: var(--slate-200); font-size: 1.25rem;">Enseignements vidéo pour votre édification spirituelle</p>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="section section-light" style="padding: 2rem 0;">
+    <div class="container-custom">
+      <div class="filters">
+        <div class="filter-group" style="flex: 2;">
+          <input type="text" id="search-input" class="search-input" placeholder="Rechercher une vidéo...">
+        </div>
+        <div class="filter-group">
+          <select id="category-filter" class="form-select">
+            <option value="">Toutes les catégories</option>
+            <option value="Enseignement">Enseignement</option>
+            <option value="Louange">Louange</option>
+            <option value="Témoignage">Témoignage</option>
+            <option value="Prière">Prière</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <select id="sort-filter" class="form-select">
+            <option value="recent">Plus récent</option>
+            <option value="oldest">Plus ancien</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Grid -->
+  <section class="section section-white" style="padding-top: 0;">
+    <div class="container-custom">
+      <div class="grid grid-3" id="videos-container">
+        <!-- Videos will be injected by JavaScript -->
+        <div class="loading">
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="hidden text-center" style="padding: 4rem 0;">
+        <svg width="64" height="64" fill="var(--slate)" viewBox="0 0 24 24" style="margin: 0 auto 1rem;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <p style="color: var(--slate); font-size: 1.25rem;">Aucune vidéo trouvée</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube Subscribe Section -->
+  <section class="section section-dark">
+    <div class="container-custom text-center">
+      <svg width="64" height="64" fill="var(--red-500)" viewBox="0 0 24 24" style="margin: 0 auto 1.5rem;"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"/></svg>
+      <h2 style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 1rem;">Abonnez-vous à notre chaîne YouTube</h2>
+      <p style="color: var(--slate-200); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Ne manquez aucun de nos enseignements et vidéos. Abonnez-vous pour être notifié des nouvelles publications.
+      </p>
+      <a href="https://youtube.com/@luchnoslampeallumee" target="_blank" class="btn btn-primary btn-lg btn-round" style="background: var(--red-500);">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 0.5rem;"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="var(--red-500)"/></svg>
+        S'abonner
+      </a>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script src="js/multimedia.js"></script>
+</body>
+</html>

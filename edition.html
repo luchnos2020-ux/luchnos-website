@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Édition Plumage - Livres chrétiens gratuits pour votre croissance spirituelle.">
+  <title>Édition Plumage | Lampe Allumée (Luchnos)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/3d-effects.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 350px;">
+    <div class="hero-content">
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 5rem; height: 5rem; background: rgba(255, 193, 0, 0.2); border-radius: 50%; margin-bottom: 1.5rem;">
+        <svg width="40" height="40" fill="var(--gold)" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+      </div>
+      <h1 style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">Édition Plumage</h1>
+      <p style="color: var(--slate-200); font-size: 1.25rem;">Livres chrétiens gratuits pour votre croissance spirituelle</p>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="section section-light" style="padding: 2rem 0;">
+    <div class="container-custom">
+      <div class="filters">
+        <div class="filter-group" style="flex: 2;">
+          <input type="text" id="search-input" class="search-input" placeholder="Rechercher un livre...">
+        </div>
+        <div class="filter-group">
+          <select id="theme-filter" class="form-select">
+            <option value="">Tous les thèmes</option>
+            <option value="Théologie">Théologie</option>
+            <option value="Vie Chrétienne">Vie Chrétienne</option>
+            <option value="Eschatologie">Eschatologie</option>
+            <option value="Prière">Prière</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <select id="sort-filter" class="form-select">
+            <option value="recent">Plus récent</option>
+            <option value="oldest">Plus ancien</option>
+            <option value="title">Titre A-Z</option>
+            <option value="author">Auteur A-Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books Grid -->
+  <section class="section section-white" style="padding-top: 0;">
+    <div class="container-custom">
+      <div class="grid grid-4" id="books-container">
+        <!-- Books will be injected by JavaScript -->
+        <div class="loading">
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="hidden text-center" style="padding: 4rem 0;">
+        <svg width="64" height="64" fill="var(--slate)" viewBox="0 0 24 24" style="margin: 0 auto 1rem;"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+        <p style="color: var(--slate); font-size: 1.25rem;">Aucun livre trouvé</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="section section-light">
+    <div class="container-custom text-center">
+      <h2 class="section-title">Pourquoi des livres gratuits ?</h2>
+      <p style="color: var(--slate-700); max-width: 700px; margin: 0 auto 2rem; font-size: 1.125rem; text-align: justify;">
+        Nous croyons que la Parole de Dieu doit être accessible à tous. C'est pourquoi nous offrons gratuitement tous nos livres et ressources spirituelles. Ces œuvres sont le fruit de l'inspiration du Saint-Esprit et sont destinées à édifier le Corps de Christ.
+      </p>
+      <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: var(--gold);">100%</div>
+          <p style="color: var(--slate);">Gratuit</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: var(--gold);">PDF</div>
+          <p style="color: var(--slate);">Téléchargeable</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; font-weight: 700; color: var(--gold);">FR</div>
+          <p style="color: var(--slate);">En Français</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script src="js/edition.js"></script>
+</body>
+</html>

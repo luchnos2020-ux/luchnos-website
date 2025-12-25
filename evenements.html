@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Événements Luchnos - Conférences, séminaires et rencontres spirituelles.">
+  <title>Événements | Lampe Allumée (Luchnos)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/3d-effects.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 350px;">
+    <div class="hero-content">
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 5rem; height: 5rem; background: rgba(255, 193, 0, 0.2); border-radius: 50%; margin-bottom: 1.5rem;">
+        <svg width="40" height="40" fill="var(--gold)" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+      </div>
+      <h1 style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">Événements</h1>
+      <p style="color: var(--slate-200); font-size: 1.25rem;">Conférences, séminaires et rencontres spirituelles</p>
+    </div>
+  </section>
+
+  <!-- Filters & Tabs Section -->
+  <section class="section section-light" style="padding: 2rem 0;">
+    <div class="container-custom">
+      <!-- Tabs -->
+      <div class="tabs" id="status-tabs">
+        <button class="tab active" data-status="all">Tous</button>
+        <button class="tab" data-status="a_venir">À venir</button>
+        <button class="tab" data-status="en_cours">En cours</button>
+        <button class="tab" data-status="termine">Passés</button>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters">
+        <div class="filter-group" style="flex: 2;">
+          <input type="text" id="search-input" class="search-input" placeholder="Rechercher un événement...">
+        </div>
+        <div class="filter-group">
+          <select id="type-filter" class="form-select">
+            <option value="">Tous les types</option>
+            <option value="conference">Conférence</option>
+            <option value="seminaire">Séminaire</option>
+            <option value="culte">Culte</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Grid -->
+  <section class="section section-white" style="padding-top: 0;">
+    <div class="container-custom">
+      <div class="grid grid-3" id="events-container">
+        <!-- Events will be injected by JavaScript -->
+        <div class="loading">
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="hidden text-center" style="padding: 4rem 0;">
+        <svg width="64" height="64" fill="var(--slate)" viewBox="0 0 24 24" style="margin: 0 auto 1rem;"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+        <p style="color: var(--slate); font-size: 1.25rem;">Aucun événement trouvé</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section section-dark">
+    <div class="container-custom text-center">
+      <h2 style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 1rem;">Ne manquez aucun événement</h2>
+      <p style="color: var(--slate-200); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Suivez-nous sur les réseaux sociaux pour être informé de nos prochains événements.
+      </p>
+      <a href="contact.html" class="btn btn-primary btn-lg btn-round">Nous contacter</a>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script src="js/evenements.js"></script>
+</body>
+</html>

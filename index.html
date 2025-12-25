@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lampe Allumée (Luchnos) - Centre Missionnaire dédié à présenter Yéhoshoua car IL revient. Enseignements bibliques, livres gratuits, événements.">
+  <title>Accueil | Lampe Allumée (Luchnos)</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/3d-effects.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+  <!-- Content will be injected by JavaScript -->
+
+  <!-- Hero Carousel Section -->
+  <section class="hero" id="hero-section" style="min-height: 520px;">
+    <div class="swiper hero-swiper" style="width: 100%; height: 100%; position: absolute; inset: 0;">
+      <div class="swiper-wrapper" id="hero-slides">
+        <!-- Slides will be injected by JavaScript -->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="section section-white">
+    <div class="container-custom text-center">
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 5rem; height: 5rem; background: var(--gradient-gold); border-radius: 50%; margin-bottom: 1.5rem; box-shadow: var(--shadow-glow);">
+        <svg width="40" height="40" fill="var(--primary)" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h2 class="section-title">Notre Mission</h2>
+      <p class="section-subtitle" style="max-width: 800px; margin: 0 auto 2rem;">
+        Présenter Yéhoshoua (Jésus) car il est le salut des humains et il revient.
+      </p>
+      <p style="color: var(--slate-700); font-size: 1.125rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+        Le Centre Missionnaire Lampe Allumée (Luchnos) est dédié à l'évangélisation, la formation biblique, l'édition d'ouvrages chrétiens et la préparation de la relève.
+      </p>
+    </div>
+  </section>
+
+  <!-- Ministry Cards Section -->
+  <section class="section section-light">
+    <div class="container-custom">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <h2 class="section-title">Nos Ministères</h2>
+        <p class="section-subtitle">Découvrez nos différents domaines d'action</p>
+      </div>
+
+      <div class="grid grid-4">
+        <!-- Multimedia Card -->
+        <a href="multimedia.html" class="ministry-card border-gold">
+          <div style="width: 4rem; height: 4rem; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="28" height="28" fill="var(--primary)" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">Luchnos Multimédia</h3>
+          <p style="color: var(--slate-600); font-size: 0.875rem;">Enseignements vidéo et audio pour votre édification spirituelle.</p>
+        </a>
+
+        <!-- Edition Card -->
+        <a href="edition.html" class="ministry-card border-blue">
+          <div style="width: 4rem; height: 4rem; background: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">Édition Plumage</h3>
+          <p style="color: var(--slate-600); font-size: 0.875rem;">Livres chrétiens gratuits pour votre croissance spirituelle.</p>
+        </a>
+
+        <!-- Events Card -->
+        <a href="evenements.html" class="ministry-card border-green">
+          <div style="width: 4rem; height: 4rem; background: var(--accent-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">Événements</h3>
+          <p style="color: var(--slate-600); font-size: 0.875rem;">Conférences, séminaires et rencontres spirituelles.</p>
+        </a>
+
+        <!-- Contact Card -->
+        <a href="contact.html" class="ministry-card border-orange">
+          <div style="width: 4rem; height: 4rem; background: var(--accent-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">Contact</h3>
+          <p style="color: var(--slate-600); font-size: 0.875rem;">Entrez en contact avec nous pour toute question.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section section-white">
+    <div class="container-custom">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <h2 class="section-title">Témoignages</h2>
+        <p class="section-subtitle">Ce que disent ceux qui nous suivent</p>
+      </div>
+
+      <div class="grid grid-3" id="testimonials-container">
+        <!-- Testimonials will be injected by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="section section-dark">
+    <div class="container-custom text-center">
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 5rem; height: 5rem; background: rgba(255, 193, 0, 0.2); border-radius: 50%; margin-bottom: 1.5rem;">
+        <svg width="40" height="40" fill="var(--gold)" viewBox="0 0 24 24" class="animate-pulse"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      </div>
+      <h2 style="font-size: 2.25rem; font-weight: 700; color: white; margin-bottom: 1rem;">Rejoignez-nous</h2>
+      <p style="color: var(--slate-200); font-size: 1.125rem; max-width: 600px; margin: 0 auto 2rem;">
+        Participez à l'avancement de l'œuvre du Seigneur avec votre don, votre talent et ce qu'il vous a donné.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="dons.html" class="btn btn-primary btn-lg btn-round">Nous soutenir</a>
+        <a href="contact.html" class="btn btn-outline btn-lg btn-round">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

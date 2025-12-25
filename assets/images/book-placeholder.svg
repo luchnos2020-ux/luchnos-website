@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="280" viewBox="0 0 200 280">
+  <rect fill="#191F34" width="200" height="280"/>
+  <rect fill="#CC7447" x="66" y="104" width="60" height="80" rx="4"/>
+  <rect fill="#FFC100" x="70" y="100" width="60" height="80" rx="4"/>
+  <rect fill="#191F34" x="75" y="110" width="50" height="4" rx="2"/>
+  <rect fill="#191F34" x="75" y="120" width="40" height="3" rx="1"/>
+  <rect fill="#191F34" x="75" y="128" width="45" height="3" rx="1"/>
+  <rect fill="#191F34" x="75" y="136" width="35" height="3" rx="1"/>
+  <text x="100" y="240" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="12">Livre</text>
+</svg>
