@@ -28,6 +28,18 @@
       "id": 1,
       "createdAt": "2025-12-27T10:32:11.846Z",
       "updatedAt": "2025-12-27T10:32:50.589Z"
+    },
+    {
+      "titre": "Les Signes avant-coureurs",
+      "auteur": "Christ B.TSAMBI",
+      "theme": "",
+      "langue": "Français",
+      "description": "",
+      "image": "https://drive.google.com/file/d/1ty9QSuLt66l_Zdj8FExyjaVwrscMRzTB/view?usp=sharing",
+      "pdfUrl": "https://drive.google.com/file/d/1Y4GddYd8r2VR2k29QIf_y4HaUyGFJzmg/view?usp=sharing",
+      "gratuit": true,
+      "id": 2,
+      "createdAt": "2025-12-27T10:41:52.312Z"
     }
   ],
   "videos": [
