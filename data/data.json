@@ -15,20 +15,7 @@
   },
   "pensees": [],
   "versets": [],
-  "livres": [
-    {
-      "titre": "Soupirs de l'Eglise",
-      "auteur": "Equipe Luchnos",
-      "theme": "",
-      "langue": "Français",
-      "description": "",
-      "image": "https://drive.google.com/file/d/12BuHe3M0-rauELEAsKsfRs1b_GtPl6cK/view?usp=sharing",
-      "pdfUrl": "https://drive.google.com/file/d/1-B7yhX-DRqsKN87FTCrrZ5Uqt-HGYXDy/view?usp=drive_link",
-      "gratuit": true,
-      "id": 1,
-      "createdAt": "2025-12-27T10:22:05.126Z"
-    }
-  ],
+  "livres": [],
   "videos": [
     {
       "titre": "Jour 2: Talk show des femmes mariées.",
