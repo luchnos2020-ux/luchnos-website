@@ -67,11 +67,20 @@ function renderBooks(books) {
 
   noResults.classList.add('hidden');
 
+  function getImageSrc(img) {
+    if (!img) return BOOK_PLACEHOLDER;
+    // Google Drive file link
+    const match = img.match(/drive\.google\.com\/file\/d\/([\w-]+)\//);
+    if (match) {
+      return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+    }
+    return img;
+  }
   container.innerHTML = books.map(book => `
     <div class="book-card" onclick="openBookModal(${book.id})">
       <div class="book-image">
         <div class="book-cover-3d">
-          <img src="${book.image}" alt="${book.titre}" onerror="this.src='${BOOK_PLACEHOLDER}'">
+          <img src="${getImageSrc(book.image)}" alt="${book.titre}" onerror="this.src='${BOOK_PLACEHOLDER}'">
         </div>
         ${book.gratuit ? '<span class="book-badge badge badge-green">Gratuit</span>' : ''}
       </div>
