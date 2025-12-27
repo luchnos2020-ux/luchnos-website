@@ -18,7 +18,7 @@
   "livres": [
     {
       "titre": "Soupirs de L'Eglise",
-      "auteur": "Equipe Luchnos",
+      "auteur": "Equipe Edition Plumage",
       "theme": "",
       "langue": "Français",
       "description": "",
@@ -26,7 +26,8 @@
       "pdfUrl": "https://drive.google.com/file/d/12BuHe3M0-rauELEAsKsfRs1b_GtPl6cK/view?usp=drive_link",
       "gratuit": true,
       "id": 1,
-      "createdAt": "2025-12-27T10:32:11.846Z"
+      "createdAt": "2025-12-27T10:32:11.846Z",
+      "updatedAt": "2025-12-27T10:32:50.589Z"
     }
   ],
   "videos": [
