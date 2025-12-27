@@ -13,9 +13,66 @@
       "whatsapp": "https://whatsapp.com/channel/0029Va9yD32DJ6H299QykwOt"
     }
   },
+  "pensees": [
+    {
+      "id": 1,
+      "texte": "Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle.",
+      "auteur": "Jean 3:16",
+      "categorie": "Bible",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "texte": "Jésus lui dit: Je suis le chemin, la vérité, et la vie. Nul ne vient au Père que par moi.",
+      "auteur": "Jean 14:6",
+      "categorie": "Bible",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "texte": "Que votre cœur ne se trouble point. Croyez en Dieu, et croyez en moi.",
+      "auteur": "Jean 14:1",
+      "categorie": "Bible",
+      "image": ""
+    }
+  ],
   "versets": [],
   "livres": [],
-  "videos": [],
+  "videos": [
+    {
+      "id": 1,
+      "titre": "Enseignement: La Prière Efficace",
+      "description": "Découvrez les clés d'une vie de prière puissante et efficace selon les Écritures.",
+      "youtubeId": "dQw4w9WgXcQ",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "categorie": "Enseignement",
+      "auteur": "Luchnos Lampe Allumée",
+      "datePublication": "2024-12-01"
+    },
+    {
+      "id": 2,
+      "titre": "Louange et Adoration - Moment de Gloire",
+      "description": "Un temps de louange et d'adoration pour élever nos cœurs vers le Seigneur.",
+      "youtubeId": "dQw4w9WgXcQ",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "categorie": "Louange",
+      "auteur": "Luchnos Lampe Allumée",
+      "datePublication": "2024-11-15"
+    },
+    {
+      "id": 3,
+      "titre": "Témoignage: Ma Transformation en Christ",
+      "description": "Un témoignage puissant de transformation par la grâce de Dieu.",
+      "youtubeId": "dQw4w9WgXcQ",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "categorie": "Témoignage",
+      "auteur": "Luchnos Lampe Allumée",
+      "datePublication": "2024-10-20"
+    }
+  ],
   "evenements": [],
   "temoignages": [
     {
