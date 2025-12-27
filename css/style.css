@@ -100,7 +100,7 @@ html {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: var(--slate-light);
+  background-color: white;
   color: var(--primary);
   line-height: 1.6;
   min-height: 100vh;
@@ -529,17 +529,26 @@ button {
 
 .social-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
+  align-items: center;
 }
 
 .social-link {
   color: #cbd5e1; /* slate-300 */
-  font-size: 1.25rem;
-  transition: color var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
 }
 
 .social-link:hover {
   color: var(--gold);
+  transform: translateY(-2px);
 }
 
 .footer-bottom {
@@ -556,20 +565,58 @@ button {
 /* ========== HERO SECTION ========== */
 .hero {
   position: relative;
-  height: 400px; /* h-[400px] - exact match to reference */
-  min-height: 400px;
+  height: 450px;
+  min-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--gradient-primary);
   overflow: hidden;
-  padding-top: 5rem; /* pt-20 for header offset */
+  padding-top: 5rem; /* Espace pour le header fixe - pages normales */
+}
+
+/* Hero carousel sur la page d'accueil uniquement */
+#hero-section {
+  margin-top: 8rem; /* Espace blanc entre header et carousel */
+  margin-bottom: 3rem; /* Espace en dessous du carousel */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(100% - 4rem); /* Largeur maximale avec marges */
+  border-radius: 1.5rem; /* Coins arrondis */
+  padding-top: 0; /* Pas de padding-top pour le carousel */
 }
 
 /* Taller hero variant for presentation page */
 .hero.hero-tall {
   height: 500px;
-  min-height: 500px;
+  min-height: 450px;
+}
+
+/* Responsive margins for carousel uniquement */
+@media (max-width: 1200px) {
+  #hero-section {
+    max-width: calc(100% - 3rem);
+    height: 400px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-section {
+    max-width: calc(100% - 2rem);
+    height: 380px;
+    min-height: 380px;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero-section {
+    max-width: calc(100% - 1rem);
+    height: 350px;
+    min-height: 350px;
+    border-radius: 1rem;
+  }
 }
 
 .hero-bg {
@@ -604,8 +651,18 @@ button {
 }
 
 @media (min-width: 768px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  
   .hero h2 {
     font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero h1 {
+    font-size: 2rem;
   }
 }
 
@@ -636,7 +693,7 @@ button {
 }
 
 .section-light {
-  background-color: var(--slate-light);
+  background-color: white;
 }
 
 .section-dark {
@@ -1088,17 +1145,53 @@ button {
 
 .swiper-pagination-bullet {
   background-color: white;
-  opacity: 0.5;
+  opacity: 0.6;
+  width: 12px;
+  height: 12px;
+  transition: all 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
   background-color: var(--gold);
   opacity: 1;
+  transform: scale(1.2);
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--gold);
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Responsive styles for carousel navigation */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 18px;
+  }
 }
 
 /* ========== LOADING STATE ========== */
