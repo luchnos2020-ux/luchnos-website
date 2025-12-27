@@ -200,7 +200,7 @@
       "createdAt": "2025-12-27T11:27:32.870Z"
     },
     {
-      "titre": "LA FEMME ETRANGERE",
+      "titre": "LA FEMME ETRANGERE ET SES ŒUVRES",
       "auteur": "Christ B.TSAMBI",
       "theme": "",
       "langue": "Français",
@@ -209,10 +209,11 @@
       "pdfUrl": "https://drive.google.com/file/d/1y82CAxw1Ad1oVjUjyQ0WagKFIzOfhMlb/view?usp=sharing",
       "gratuit": true,
       "id": 16,
-      "createdAt": "2025-12-27T11:29:36.039Z"
+      "createdAt": "2025-12-27T11:29:36.039Z",
+      "updatedAt": "2025-12-27T12:04:17.747Z"
     },
     {
-      "titre": "LE COMBAT SPIRITUEL",
+      "titre": "LE COMBAT SPIRITUEL: CE QU'IL FAUT SAVOIR ",
       "auteur": "Christ B.TSAMBI",
       "theme": "",
       "langue": "Français",
@@ -221,7 +222,8 @@
       "pdfUrl": "https://drive.google.com/file/d/1wfIvEhYlbAuFF_N9EGiN7W4cOnZn8r-N/view?usp=sharing",
       "gratuit": true,
       "id": 17,
-      "createdAt": "2025-12-27T11:31:41.571Z"
+      "createdAt": "2025-12-27T11:31:41.571Z",
+      "updatedAt": "2025-12-27T11:55:57.007Z"
     }
   ],
   "videos": [
