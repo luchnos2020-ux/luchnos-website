@@ -41,27 +41,55 @@
       </div>
 
       <!-- Filtres avancés -->
-      <div class="filters">
-        <div class="filter-group">
-          <select id="theme-filter" class="form-select">
-            <option value="">Tous les thèmes</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <select id="langue-filter" class="form-select">
-            <option value="">Toutes les langues</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <input type="text" id="auteur-filter" class="search-input" placeholder="Auteur...">
-        </div>
-        <div class="filter-group">
-          <select id="sort-filter" class="form-select">
-            <option value="recent">Plus récents</option>
-            <option value="oldest">Plus anciens</option>
-            <option value="title">Titre (A-Z)</option>
-            <option value="author">Auteur (A-Z)</option>
-          </select>
+            <div class="filters-inline-wrapper">
+              <div class="filter-group">
+                <select id="theme-filter-inline" class="form-select">
+                  <option value="">Tous les thèmes</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <select id="langue-filter-inline" class="form-select">
+                  <option value="">Toutes les langues</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <input type="text" id="auteur-filter-inline" class="search-input" placeholder="Auteur...">
+              </div>
+              <div class="filter-group">
+                <select id="sort-filter-inline" class="form-select">
+                  <option value="recent">Plus récents</option>
+                  <option value="oldest">Plus anciens</option>
+                  <option value="title">Titre (A-Z)</option>
+                  <option value="author">Auteur (A-Z)</option>
+                </select>
+              </div>
+            </div>
+      <div class="filters-dropdown-wrapper">
+        <button id="filters-dropdown-btn" class="filters-dropdown-btn" type="button">
+          Filtres <span style="font-size:1.1em;">&#9660;</span>
+        </button>
+        <div id="filters-dropdown-menu" class="filters-dropdown-menu" style="display:none;">
+          <div class="filter-group">
+            <select id="theme-filter" class="form-select">
+              <option value="">Tous les thèmes</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <select id="langue-filter" class="form-select">
+              <option value="">Toutes les langues</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <input type="text" id="auteur-filter" class="search-input" placeholder="Auteur...">
+          </div>
+          <div class="filter-group">
+            <select id="sort-filter" class="form-select">
+              <option value="recent">Plus récents</option>
+              <option value="oldest">Plus anciens</option>
+              <option value="title">Titre (A-Z)</option>
+              <option value="author">Auteur (A-Z)</option>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -92,5 +120,8 @@
 
   <script src="js/main.js"></script>
   <script src="js/edition.js"></script>
+  <script src="js/filters-dropdown.js"></script>
+</body>
+<script src="js/collapsible-filters.js"></script>
 </body>
 </html>

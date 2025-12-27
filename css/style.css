@@ -1,3 +1,93 @@
+/* ========== RESPONSIVE FILTERS VISIBILITY ========== */
+.filters-dropdown-wrapper { display: none; }
+.filters-inline-wrapper { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
+
+@media (max-width: 767px) {
+  .filters-dropdown-wrapper { display: block; }
+  .filters-inline-wrapper { display: none !important; }
+}
+/* ========== FILTERS DROPDOWN (Menu déroulant filtres) ========== */
+.filters-dropdown-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+
+.filters-dropdown-btn {
+  background: white;
+  color: var(--primary);
+  border: 1.5px solid var(--gold);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: background var(--transition-normal), color var(--transition-normal);
+  outline: none;
+  display: none;
+}
+.filters-dropdown-btn:focus, .filters-dropdown-btn[aria-expanded="true"] {
+  background: var(--gold);
+  color: white;
+}
+@media (max-width: 767px) {
+  .filters-dropdown-btn {
+    display: block;
+    width: 100%;
+  }
+}
+
+.filters-dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  min-width: 250px;
+  background: white;
+  border: 1.5px solid var(--gold);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 1rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  animation: fadeIn 0.2s;
+}
+
+@media (max-width: 767px) {
+  .filters-dropdown-menu {
+    min-width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+/* ========== COLLAPSIBLE FILTERS (Mobile) ========== */
+@media (max-width: 767px) {
+  .collapsible-filters-hidden {
+    display: none !important;
+  }
+  .show-filters-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--gold);
+    background: white;
+    color: var(--primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 0.75rem 1rem;
+    text-align: center;
+    transition: background var(--transition-normal), color var(--transition-normal);
+  }
+  .show-filters-btn[aria-expanded="true"] {
+    background: var(--gold);
+    color: white;
+  }
+}
 /* ========================================
    LUCHNOS - Main Stylesheet
    Converted from Tailwind CSS

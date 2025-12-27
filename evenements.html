@@ -26,7 +26,7 @@
         <span style="color: white;">Nos</span>
         <span style="color: var(--gold);"> Événements</span>
       </h1>
-      <p style="color: var(--slate-200); font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Découvrez nos prochaines rencontres et célébrations</p>
+      <p style="color: var(--slate-200); font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Découvrez nos prochaines rencontres et programmes</p>
     </div>
   </section>
 
@@ -42,18 +42,37 @@
       </div>
 
       <!-- Filters -->
-      <div class="filters">
-        <div class="filter-group" style="flex: 2;">
-          <input type="text" id="search-input" class="search-input" placeholder="Rechercher un événement...">
-        </div>
-        <div class="filter-group">
-          <select id="type-filter" class="form-select">
-            <option value="">Tous les types</option>
-            <option value="conference">Conférence</option>
-            <option value="seminaire">Séminaire</option>
-            <option value="culte">Culte</option>
-            <option value="autre">Autre</option>
-          </select>
+            <div class="filters-inline-wrapper">
+              <div class="filter-group" style="flex: 2;">
+                <input type="text" id="search-input-inline" class="search-input" placeholder="Rechercher un événement...">
+              </div>
+              <div class="filter-group">
+                <select id="type-filter-inline" class="form-select">
+                  <option value="">Tous les types</option>
+                  <option value="conference">Conférence</option>
+                  <option value="seminaire">Séminaire</option>
+                  <option value="culte">Culte</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+            </div>
+      <div class="filters-dropdown-wrapper">
+        <button id="filters-dropdown-btn" class="filters-dropdown-btn" type="button">
+          Filtres <span style="font-size:1.1em;">&#9660;</span>
+        </button>
+        <div id="filters-dropdown-menu" class="filters-dropdown-menu" style="display:none;">
+          <div class="filter-group" style="flex: 2;">
+            <input type="text" id="search-input" class="search-input" placeholder="Rechercher un événement...">
+          </div>
+          <div class="filter-group">
+            <select id="type-filter" class="form-select">
+              <option value="">Tous les types</option>
+              <option value="conference">Conférence</option>
+              <option value="seminaire">Séminaire</option>
+              <option value="culte">Culte</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
@@ -87,5 +106,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/evenements.js"></script>
+    <script src="js/filters-dropdown.js"></script>
+  <script src="js/collapsible-filters.js"></script>
 </body>
 </html>

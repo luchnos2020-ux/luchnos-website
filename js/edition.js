@@ -141,17 +141,36 @@ function openBookModal(bookId) {
 }
 
 function initFilters() {
+  // Dropdown (mobile)
   const searchInput = document.getElementById('search-input');
   const themeFilter = document.getElementById('theme-filter');
   const langueFilter = document.getElementById('langue-filter');
   const auteurFilter = document.getElementById('auteur-filter');
   const sortFilter = document.getElementById('sort-filter');
+  // Inline (desktop/tablette)
+  const searchInputInline = document.getElementById('search-input-inline');
+  const themeFilterInline = document.getElementById('theme-filter-inline');
+  const langueFilterInline = document.getElementById('langue-filter-inline');
+  const auteurFilterInline = document.getElementById('auteur-filter-inline');
+  const sortFilterInline = document.getElementById('sort-filter-inline');
+
+  function getActiveFilters() {
+    // Si mobile (dropdown visible), on prend les valeurs du dropdown, sinon inline
+    const isMobile = window.innerWidth <= 767;
+    return {
+      search: isMobile && searchInput ? searchInput.value : (searchInputInline ? searchInputInline.value : ''),
+      theme: isMobile && themeFilter ? themeFilter.value : (themeFilterInline ? themeFilterInline.value : ''),
+      langue: isMobile && langueFilter ? langueFilter.value : (langueFilterInline ? langueFilterInline.value : ''),
+      auteur: isMobile && auteurFilter ? auteurFilter.value : (auteurFilterInline ? auteurFilterInline.value : ''),
+      sort: isMobile && sortFilter ? sortFilter.value : (sortFilterInline ? sortFilterInline.value : 'recent'),
+    };
+  }
 
   const applyFilters = Luchnos.debounce(() => {
     let filtered = [...allBooks];
-
+    const filters = getActiveFilters();
     // Search filter
-    const searchTerm = searchInput.value.toLowerCase().trim();
+    const searchTerm = filters.search.toLowerCase().trim();
     if (searchTerm) {
       filtered = filtered.filter(book =>
         book.titre.toLowerCase().includes(searchTerm) ||
@@ -159,30 +178,26 @@ function initFilters() {
         book.auteur.toLowerCase().includes(searchTerm)
       );
     }
-
     // Theme filter
-    const theme = themeFilter.value;
+    const theme = filters.theme;
     if (theme) {
       filtered = filtered.filter(book =>
         book.theme?.toLowerCase().includes(theme.toLowerCase()) ||
         book.categorie?.toLowerCase().includes(theme.toLowerCase())
       );
     }
-
     // Langue filter
-    const langue = langueFilter.value;
+    const langue = filters.langue;
     if (langue) {
       filtered = filtered.filter(book => book.langue?.toLowerCase() === langue.toLowerCase());
     }
-
     // Auteur filter
-    const auteur = auteurFilter.value.toLowerCase().trim();
+    const auteur = filters.auteur.toLowerCase().trim();
     if (auteur) {
       filtered = filtered.filter(book => book.auteur?.toLowerCase().includes(auteur));
     }
-
     // Sort
-    const sort = sortFilter.value;
+    const sort = filters.sort;
     switch (sort) {
       case 'recent':
         filtered.sort((a, b) => b.id - a.id);
@@ -196,14 +211,48 @@ function initFilters() {
       case 'author':
         filtered.sort((a, b) => a.auteur.localeCompare(b.auteur));
         break;
+      case 'views':
+        if (filtered[0] && filtered[0].views !== undefined) {
+          filtered.sort((a, b) => b.views - a.views);
+        }
+        break;
     }
-
     renderBooks(filtered);
   }, 300);
 
-  searchInput.addEventListener('input', applyFilters);
-  themeFilter.addEventListener('change', applyFilters);
-  langueFilter.addEventListener('change', applyFilters);
-  auteurFilter.addEventListener('input', applyFilters);
-  sortFilter.addEventListener('change', applyFilters);
+  // Dropdown (mobile)
+  if (searchInput) searchInput.addEventListener('input', applyFilters);
+  if (themeFilter) themeFilter.addEventListener('change', applyFilters);
+  if (langueFilter) langueFilter.addEventListener('change', applyFilters);
+  if (auteurFilter) auteurFilter.addEventListener('input', applyFilters);
+  if (sortFilter) sortFilter.addEventListener('change', applyFilters);
+  // Inline (desktop/tablette)
+  if (searchInputInline) searchInputInline.addEventListener('input', applyFilters);
+  if (themeFilterInline) themeFilterInline.addEventListener('change', applyFilters);
+  if (langueFilterInline) langueFilterInline.addEventListener('change', applyFilters);
+  if (auteurFilterInline) auteurFilterInline.addEventListener('input', applyFilters);
+  if (sortFilterInline) sortFilterInline.addEventListener('change', applyFilters);
+
+  // Synchronisation des valeurs entre dropdown et inline (pour garder la même sélection si on change de taille d'écran)
+  function syncFilters() {
+    if (themeFilter && themeFilterInline) themeFilterInline.value = themeFilter.value;
+    if (langueFilter && langueFilterInline) langueFilterInline.value = langueFilter.value;
+    if (auteurFilter && auteurFilterInline) auteurFilterInline.value = auteurFilter.value;
+    if (sortFilter && sortFilterInline) sortFilterInline.value = sortFilter.value;
+    if (searchInput && searchInputInline) searchInputInline.value = searchInput.value;
+  }
+  function syncFiltersReverse() {
+    if (themeFilter && themeFilterInline) themeFilter.value = themeFilterInline.value;
+    if (langueFilter && langueFilterInline) langueFilter.value = langueFilterInline.value;
+    if (auteurFilter && auteurFilterInline) auteurFilter.value = auteurFilterInline.value;
+    if (sortFilter && sortFilterInline) sortFilter.value = sortFilterInline.value;
+    if (searchInput && searchInputInline) searchInput.value = searchInputInline.value;
+  }
+  window.addEventListener('resize', function() {
+    if (window.innerWidth <= 767) syncFiltersReverse();
+    else syncFilters();
+  });
+  // Initial sync
+  if (window.innerWidth <= 767) syncFiltersReverse();
+  else syncFilters();
 }

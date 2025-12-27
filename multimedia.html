@@ -40,28 +40,57 @@
       </div>
 
       <!-- Filtres -->
-      <div class="filters">
-        <div class="filter-group">
-          <select id="theme-filter" class="form-select">
-            <option value="">Tous les thèmes</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <select id="auteur-filter" class="form-select">
-            <option value="">Tous les auteurs</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <select id="annee-filter" class="form-select">
-            <option value="">Toutes les années</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <select id="sort-filter" class="form-select">
-            <option value="recent">Plus récentes</option>
-            <option value="oldest">Plus anciennes</option>
-            <option value="views">Plus populaires</option>
-          </select>
+            <div class="filters-inline-wrapper">
+              <div class="filter-group">
+                <select id="theme-filter-inline" class="form-select">
+                  <option value="">Tous les thèmes</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <select id="auteur-filter-inline" class="form-select">
+                  <option value="">Tous les auteurs</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <select id="annee-filter-inline" class="form-select">
+                  <option value="">Toutes les années</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <select id="sort-filter-inline" class="form-select">
+                  <option value="recent">Plus récentes</option>
+                  <option value="oldest">Plus anciennes</option>
+                  <option value="views">Plus populaires</option>
+                </select>
+              </div>
+            </div>
+      <div class="filters-dropdown-wrapper">
+        <button id="filters-dropdown-btn" class="filters-dropdown-btn" type="button">
+          Filtres <span style="font-size:1.1em;">&#9660;</span>
+        </button>
+        <div id="filters-dropdown-menu" class="filters-dropdown-menu" style="display:none;">
+          <div class="filter-group">
+            <select id="theme-filter" class="form-select">
+              <option value="">Tous les thèmes</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <select id="auteur-filter" class="form-select">
+              <option value="">Tous les auteurs</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <select id="annee-filter" class="form-select">
+              <option value="">Toutes les années</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <select id="sort-filter" class="form-select">
+              <option value="recent">Plus récentes</option>
+              <option value="oldest">Plus anciennes</option>
+              <option value="views">Plus populaires</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
@@ -102,5 +131,8 @@
 
   <script src="js/main.js"></script>
   <script src="js/multimedia.js"></script>
+  <script src="js/filters-dropdown.js"></script>
+</body>
+<script src="js/collapsible-filters.js"></script>
 </body>
 </html>
