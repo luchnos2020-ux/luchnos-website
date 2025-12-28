@@ -76,6 +76,32 @@
   );
 }
 
+/* Mobile: reduce 3D effects to prevent clipping */
+@media (max-width: 767px) {
+  .book-cover-3d {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .book-cover-3d img {
+    transform: rotateY(-2deg) rotateX(1deg);
+    max-width: 90%;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+  }
+
+  .book-cover-3d:hover img {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+  }
+
+  .book-cover-3d::after {
+    left: -4px;
+    width: 4px;
+  }
+}
+
 /* Effets 3D pour les événements */
 .event-image-3d {
   position: relative;
