@@ -89,7 +89,7 @@ function renderBooks(books) {
         <h3 class="book-title">${book.titre}</h3>
         <p class="book-description">${book.description}</p>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
-          <span style="color: var(--slate); font-size: 0.875rem;">${book.nombrePages} pages</span>
+          ${book.nombrePages ? `<span style="color: var(--slate); font-size: 0.875rem;">${book.nombrePages} pages</span>` : '<span></span>'}
           ${book.gratuit && book.pdfUrl ? `
             <a href="${book.pdfUrl}" class="btn btn-sm btn-primary" onclick="event.stopPropagation();" target="_blank">
               Télécharger
@@ -138,9 +138,11 @@ function openBookModal(bookId) {
           ${book.description}
         </p>
 
+${book.nombrePages ? `
         <div style="display: flex; gap: 1rem; color: var(--slate); font-size: 0.875rem; margin-bottom: 1.5rem;">
           <span>${book.nombrePages} pages</span>
         </div>
+` : ''}
 
         ${book.gratuit && book.pdfUrl ? `
           <a href="${book.pdfUrl}" class="btn btn-primary btn-lg" target="_blank">
