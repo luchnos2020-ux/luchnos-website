@@ -69,10 +69,10 @@ function renderBooks(books) {
 
   function getImageSrc(img) {
     if (!img) return BOOK_PLACEHOLDER;
-    // Google Drive file link
-    const match = img.match(/drive\.google\.com\/file\/d\/([\w-]+)\//);
+    // Google Drive file link - use lh3.googleusercontent.com for reliable embedding
+    const match = img.match(/drive\.google\.com\/file\/d\/([\w-]+)/);
     if (match) {
-      return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+      return `https://lh3.googleusercontent.com/d/${match[1]}`;
     }
     return img;
   }
@@ -105,14 +105,24 @@ function renderBooks(books) {
   `).join('');
 }
 
+function getBookImageSrc(img) {
+  if (!img) return BOOK_PLACEHOLDER;
+  const match = img.match(/drive\.google\.com\/file\/d\/([\w-]+)/);
+  if (match) {
+    return `https://lh3.googleusercontent.com/d/${match[1]}`;
+  }
+  return img;
+}
+
 function openBookModal(bookId) {
   const book = allBooks.find(b => b.id === bookId);
   if (!book) return;
+  const bookImageUrl = getBookImageSrc(book.image);
 
   const content = `
     <div style="display: grid; gap: 2rem; grid-template-columns: 1fr 2fr;">
       <div class="book-cover-3d" style="text-align: center;">
-        <img src="${book.image}" alt="${book.titre}" style="max-width: 200px; margin: 0 auto;" onerror="this.src='${BOOK_PLACEHOLDER}'">
+        <img src="${bookImageUrl}" alt="${book.titre}" style="max-width: 200px; margin: 0 auto;" onerror="this.src='${BOOK_PLACEHOLDER}'">
       </div>
       <div>
         <p style="color: var(--copper); font-size: 0.875rem; margin-bottom: 0.5rem;">${book.auteur}</p>

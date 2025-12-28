@@ -8,6 +8,19 @@ const VIDEO_PLACEHOLDER = "assets/images/video-placeholder.svg";
 
 let allVideos = [];
 
+// Extract YouTube ID from URL
+function getYoutubeId(video) {
+  // If youtubeId exists, use it directly
+  if (video.youtubeId) return video.youtubeId;
+
+  // Extract from youtubeUrl
+  if (video.youtubeUrl) {
+    const match = video.youtubeUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/);
+    if (match) return match[1];
+  }
+  return '';
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   await loadVideos();
   initFilters();
@@ -68,7 +81,7 @@ function renderVideos(videos) {
   noResults.classList.add('hidden');
 
   container.innerHTML = videos.map(video => `
-    <div class="video-card" onclick="Luchnos.openVideoModal('${video.youtubeId}')">
+    <div class="video-card" onclick="Luchnos.openVideoModal('${getYoutubeId(video)}')">
       <div class="video-thumbnail">
         <img src="${video.thumbnail}" alt="${video.titre}" onerror="this.src='${VIDEO_PLACEHOLDER}'">
         <div class="video-play-btn">
