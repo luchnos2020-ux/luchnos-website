@@ -8,6 +8,14 @@ const VIDEO_PLACEHOLDER = "assets/images/video-placeholder.svg";
 
 let allVideos = [];
 
+// Generic boilerplate description to hide
+const GENERIC_DESCRIPTION_PREFIX = "Pour plus de détails sur nous et si vous souhaitez télécharger";
+
+function isGenericDescription(description) {
+  if (!description || description.trim() === '') return true;
+  return description.startsWith(GENERIC_DESCRIPTION_PREFIX);
+}
+
 // Extract YouTube ID from URL
 function getYoutubeId(video) {
   // If youtubeId exists, use it directly
@@ -91,9 +99,11 @@ function renderVideos(videos) {
       <div class="video-content">
         <span class="video-category">${video.categorie}</span>
         <h3 class="video-title">${video.titre}</h3>
+${!isGenericDescription(video.description) ? `
         <p style="color: var(--slate-600); font-size: 0.875rem; margin-bottom: 0.5rem;">
           ${Luchnos.truncateText(video.description, 100)}
         </p>
+` : ''}
         <div style="display: flex; justify-content: space-between; color: var(--slate); font-size: 0.75rem;">
           <span>${video.auteur}</span>
           <span>${video.datePublication ? Luchnos.formatDateShort(video.datePublication) : ''}</span>
