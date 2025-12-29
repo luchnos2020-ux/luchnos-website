@@ -1,3 +1,10 @@
+/* Fix: Espace sous le bouton du carousel en mobile */
+@media (max-width: 600px) {
+  .swiper-slide .btn,
+  .swiper-slide .btn-primary {
+    margin-bottom: 2.5rem;
+  }
+}
 /* ========== RESPONSIVE FILTERS VISIBILITY ========== */
 .filters-dropdown-wrapper { display: none; }
 .filters-inline-wrapper { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
