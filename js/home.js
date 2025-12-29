@@ -16,10 +16,11 @@ async function initHeroCarousel() {
   const slidesContainer = document.getElementById('hero-slides');
   if (!slidesContainer) return;
 
-  // Combine versets and create slides
+
+  // Création des slides du carrousel
   const slides = [];
 
-  // Add welcome slide
+  // Slide de bienvenue
   slides.push({
     type: 'welcome',
     title: 'Bienvenue',
@@ -28,9 +29,7 @@ async function initHeroCarousel() {
     cta: { label: 'En Savoir Plus', href: 'presentation.html' }
   });
 
-  // Les versets ne sont plus affichés dans le carousel
-
-  // Add featured events
+  // Slide événement à venir (inchangé)
   if (data.evenements && data.evenements.length > 0) {
     const upcomingEvent = data.evenements.find(e => Luchnos.getEventStatus(e.date) === 'a_venir');
     if (upcomingEvent) {
@@ -43,6 +42,20 @@ async function initHeroCarousel() {
         cta: { label: 'Voir les événements', href: 'evenements.html' }
       });
     }
+  }
+
+  // Slides livres sélectionnés pour le carrousel (carousel=true)
+  if (data.livres && Array.isArray(data.livres)) {
+    data.livres.filter(livre => livre.carousel === true).forEach(livre => {
+      slides.push({
+        type: 'livre',
+        titre: livre.titre,
+        auteur: livre.auteur,
+        description: livre.description,
+        pdfUrl: livre.pdfUrl,
+        image: livre.image
+      });
+    });
   }
 
   // Render slides
@@ -83,9 +96,7 @@ function renderSlide(slide) {
           <h1 style="font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1.5rem; color: white; line-height: 1.2;">
             Lampe Allumée (Luchnos)
           </h1>
-          <p style="font-size: clamp(1rem, 2vw, 1.25rem); color: white; max-width: 700px; margin: 0 auto 2.5rem; font-weight: 400; line-height: 1.6;">
-            ${slide.text}
-          </p>
+          <!-- Slogan retiré -->
           ${slide.cta ? `<a href="${slide.cta.href}" class="btn btn-primary btn-lg btn-round" style="background: var(--gold); color: var(--primary); font-weight: 700; padding: 1rem 2.5rem; font-size: 1rem; box-shadow: 0 4px 14px rgba(255, 193, 0, 0.4); border: none;">${slide.cta.label}</a>` : ''}
         </div>
       `;
@@ -132,19 +143,18 @@ function renderSlide(slide) {
       break;
 
     case 'livre':
+      // Utiliser l'image du livre comme background du slide
       content = `
         <div class="hero-content animate-fade-in-up">
-          <div style="display: inline-flex; align-items: center; justify-content: center; width: 5rem; height: 5rem; background: linear-gradient(135deg, #22C55E 0%, #BBF7D0 100%); border-radius: 50%; margin-bottom: 2rem; box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);">
-            <svg width="32" height="32" fill="#22C55E" viewBox="0 0 448 512"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
-          </div>
-          <h2 style="font-size: clamp(1.5rem, 3vw, 2.5rem); color: #22C55E; margin-bottom: 1rem; font-weight: 700; line-height: 1.2;">
-            ${slide.titre}
-          </h2>
-          <p style="color: #166534; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 500; margin-bottom: 1rem;">${slide.auteur ? `par ${slide.auteur}` : ''}</p>
-          <p style="color: #166534; font-size: clamp(1rem, 2vw, 1.1rem); max-width: 700px; margin: 0 auto 1.5rem; line-height: 1.6;">
-            ${slide.description ? Luchnos.truncateText(slide.description, 120) : ''}
-          </p>
-          ${slide.pdfUrl ? `<a href="${slide.pdfUrl}" class="btn btn-primary btn-lg btn-round" style="background: #22C55E; color: white; font-weight: 700; padding: 1rem 2.5rem; font-size: 1rem; box-shadow: 0 4px 14px rgba(34, 197, 94, 0.2); border: none;" target="_blank">Lire le livre</a>` : ''}
+            <span class="badge badge-gold" style="margin-bottom: 1rem; padding: 0.5rem 1rem; background: rgba(234, 179, 8, 0.15); color: #eab308; border-radius: 2rem; font-weight: 600; font-size: 1rem; display: inline-block;">
+              NOUVEAU LIVRE
+            </span>
+            <h2 style="font-size: clamp(2rem, 5vw, 4rem); color: white; margin-bottom: 1rem; font-weight: 700; line-height: 1.2;">
+              ${slide.titre}
+            </h2>
+            <p style="color: #eab308; font-size: 1.1rem; font-weight: 600; margin-bottom: 2rem;">Par ${slide.auteur}</p>
+            <!-- Texte promotionnel retiré -->
+          ${slide.pdfUrl ? `<a href="${slide.pdfUrl}" class="btn btn-primary btn-lg btn-round" style="background: #eab308; color: #22223b; font-weight: 700; padding: 1rem 2.5rem; font-size: 1.1rem; box-shadow: 0 4px 14px rgba(234, 179, 8, 0.15); border: none;" target="_blank">Découvrir le Livre</a>` : ''}
         </div>
       `;
       break;
@@ -154,14 +164,26 @@ function renderSlide(slide) {
   let slideStyle = '';
 
   if (slide.type === 'welcome') {
-    // Welcome slide: Bible image with overlay (opacité réduite pour plus de visibilité)
+    // Welcome slide: Bible image avec overlay
     slideStyle = "background: linear-gradient(rgba(25, 31, 52, 0.4), rgba(25, 31, 52, 0.4)), url('assets/images/bible-default.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;";
   } else if (slide.type === 'pensee') {
     // Pensée slide: Utilise l'image personnalisée ou l'image par défaut
     const image = slide.image && slide.image.trim() !== '' ? slide.image : 'assets/images/bible-default.jpg';
     slideStyle = `background: linear-gradient(rgba(250, 204, 21, 0.10), rgba(250, 204, 21, 0.10)), url('${image}'); background-size: cover; background-position: center; background-repeat: no-repeat;`;
+  } else if (slide.type === 'livre') {
+    // Livre : image de couverture en background avec overlay foncé
+    function getImageSrc(img) {
+      if (!img) return 'assets/images/book-placeholder.png';
+      const match = img.match(/drive\.google\.com\/file\/d\/([\w-]+)/);
+      if (match) {
+        return `https://lh3.googleusercontent.com/d/${match[1]}`;
+      }
+      return img;
+    }
+    const bg = getImageSrc(slide.image);
+    slideStyle = `background: linear-gradient(rgba(25, 31, 52, 0.65), rgba(25, 31, 52, 0.65)), url('${bg}'); background-size: cover; background-position: center; background-repeat: no-repeat;`;
   } else {
-    // Event/livre slide: Gradient background
+    // Event slide: Gradient background
     slideStyle = "background: var(--gradient-primary);";
   }
 
