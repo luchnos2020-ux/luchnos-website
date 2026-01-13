@@ -752,6 +752,36 @@
       "categorie": "YouTube",
       "id": 51,
       "createdAt": "2026-01-01T11:33:32.608Z"
+    },
+    {
+      "titre": "Flash encouragement || La conscience du retour du Seigneur.(06/01/2026).",
+      "youtubeUrl": "https://www.youtube.com/watch?v=6hGvLMP4KOo",
+      "thumbnail": "https://i.ytimg.com/vi/6hGvLMP4KOo/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 52,
+      "createdAt": "2026-01-13T22:20:20.440Z"
+    },
+    {
+      "titre": "Flash encouragement || La crainte des humains tend un piège.(02/01/2026).",
+      "youtubeUrl": "https://www.youtube.com/watch?v=om2DcC6-h1w",
+      "thumbnail": "https://i.ytimg.com/vi/om2DcC6-h1w/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 53,
+      "createdAt": "2026-01-13T22:20:20.443Z"
+    },
+    {
+      "titre": "Flash encouragement || Considère le service que tu as reçu du Seigneur. (03/01/2026).",
+      "youtubeUrl": "https://www.youtube.com/watch?v=NsUXHS2jYZY",
+      "thumbnail": "https://i.ytimg.com/vi/NsUXHS2jYZY/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 54,
+      "createdAt": "2026-01-13T22:20:20.443Z"
     }
   ],
   "evenements": [],
