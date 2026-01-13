@@ -7,6 +7,9 @@
 const VIDEO_PLACEHOLDER = "assets/images/video-placeholder.svg";
 
 let allVideos = [];
+let videosPerPage = 6;
+let currentPage = 1;
+let filteredVideos = [];
 
 // Generic boilerplate description to hide
 const GENERIC_DESCRIPTION_PREFIX = "Pour plus de détails sur nous et si vous souhaitez télécharger";
@@ -41,7 +44,21 @@ async function loadVideos() {
     return;
   }
 
-  allVideos = data.videos;
+  // Sort videos by most recent first (with fallback to ID if no date)
+  allVideos = data.videos.sort((a, b) => {
+    const dateA = a.datePublication ? new Date(a.datePublication).getTime() : 0;
+    const dateB = b.datePublication ? new Date(b.datePublication).getTime() : 0;
+    
+    if (dateA !== dateB) {
+      return dateB - dateA; // Most recent first
+    }
+    
+    // Fallback to ID if dates are equal
+    return (b.id || 0) - (a.id || 0);
+  });
+  
+  filteredVideos = [...allVideos];
+  currentPage = 1;
 
   // Populate theme filter dynamically
   const themes = [...new Set(allVideos.map(v => v.categorie).filter(Boolean))].sort();
@@ -73,7 +90,7 @@ async function loadVideos() {
     anneeFilter.appendChild(option);
   });
 
-  renderVideos(allVideos);
+  renderVideos(filteredVideos);
 }
 
 function renderVideos(videos) {
@@ -88,7 +105,13 @@ function renderVideos(videos) {
 
   noResults.classList.add('hidden');
 
-  container.innerHTML = videos.map(video => `
+  // Calculate pagination - show all videos up to current page
+  const endIndex = currentPage * videosPerPage;
+  const displayedVideos = videos.slice(0, endIndex);
+  const hasMore = endIndex < videos.length;
+
+  // Clear container and add all displayed videos
+  container.innerHTML = displayedVideos.map(video => `
     <div class="video-card" onclick="Luchnos.openVideoModal('${getYoutubeId(video)}')">
       <div class="video-thumbnail">
         <img src="${video.thumbnail}" alt="${video.titre}" onerror="this.src='${VIDEO_PLACEHOLDER}'">
@@ -111,6 +134,23 @@ ${!isGenericDescription(video.description) ? `
       </div>
     </div>
   `).join('');
+
+  // Add "Voir plus" button if there are more videos
+  if (hasMore) {
+    const buttonContainer = document.createElement('div');
+    buttonContainer.style.cssText = 'grid-column: 1/-1; display: flex; justify-content: center; margin-top: 2rem;';
+    buttonContainer.innerHTML = `
+      <button id="load-more-btn" class="btn btn-lg btn-round" style="background: var(--primary); color: white;">
+        Voir plus de vidéos
+      </button>
+    `;
+    container.appendChild(buttonContainer);
+    
+    document.getElementById('load-more-btn').addEventListener('click', () => {
+      currentPage++;
+      renderVideos(videos);
+    });
+  }
 }
 
 function initFilters() {
@@ -154,15 +194,37 @@ function initFilters() {
     }
 
     // Sort
-    const sort = sortFilter.value;
+    const sort = sortFilter.value || 'recent'; // Default to recent
     if (sort === 'recent') {
-      filtered.sort((a, b) => new Date(b.datePublication) - new Date(a.datePublication));
+      filtered.sort((a, b) => {
+        const dateA = a.datePublication ? new Date(a.datePublication).getTime() : 0;
+        const dateB = b.datePublication ? new Date(b.datePublication).getTime() : 0;
+        
+        if (dateA !== dateB) {
+          return dateB - dateA; // Most recent first
+        }
+        
+        // Fallback to ID if dates are equal
+        return (b.id || 0) - (a.id || 0);
+      });
     } else if (sort === 'oldest') {
-      filtered.sort((a, b) => new Date(a.datePublication) - new Date(b.datePublication));
+      filtered.sort((a, b) => {
+        const dateA = a.datePublication ? new Date(a.datePublication).getTime() : 0;
+        const dateB = b.datePublication ? new Date(b.datePublication).getTime() : 0;
+        
+        if (dateA !== dateB) {
+          return dateA - dateB; // Oldest first
+        }
+        
+        // Fallback to ID if dates are equal
+        return (a.id || 0) - (b.id || 0);
+      });
     } else if (sort === 'views') {
       filtered.sort((a, b) => (b.vues || 0) - (a.vues || 0));
     }
 
+    filteredVideos = filtered;
+    currentPage = 1;
     renderVideos(filtered);
   }, 300);
 
