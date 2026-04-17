@@ -240,6 +240,18 @@
       "carousel": true,
       "createdAt": "2025-12-27T11:31:41.571Z",
       "updatedAt": "2025-12-27T11:55:57.007Z"
+    },
+    {
+      "titre": "VIS TA SAISON",
+      "auteur": "Reine Mvoulabolo",
+      "theme": "",
+      "langue": "Français",
+      "description": "",
+      "image": "https://drive.google.com/file/d/1aF5dnihCobhmqKlhFArQraLEpus5exNh/view?usp=drive_link",
+      "pdfUrl": "https://drive.google.com/file/d/1zd4vedmLCo9e6-PawAj5qacUYTJy0Jeq/view?usp=sharing",
+      "gratuit": true,
+      "id": 18,
+      "createdAt": "2026-04-17T18:03:55.971Z"
     }
   ],
   "videos": [
