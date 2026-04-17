@@ -782,6 +782,56 @@
       "categorie": "YouTube",
       "id": 54,
       "createdAt": "2026-01-13T22:20:20.443Z"
+    },
+    {
+      "titre": "Cantique || J&#39;irai là-haut(2020)",
+      "youtubeUrl": "https://www.youtube.com/watch?v=YzPzrQJdZEk",
+      "thumbnail": "https://i.ytimg.com/vi/YzPzrQJdZEk/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 55,
+      "createdAt": "2026-02-05T07:48:02.058Z"
+    },
+    {
+      "titre": "Cantique || Festin.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dBhwxPZno8Y",
+      "thumbnail": "https://i.ytimg.com/vi/dBhwxPZno8Y/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 56,
+      "createdAt": "2026-02-05T07:48:02.062Z"
+    },
+    {
+      "titre": "Cantique || Le Royaume(2020).",
+      "youtubeUrl": "https://www.youtube.com/watch?v=XqfTKn87CGk",
+      "thumbnail": "https://i.ytimg.com/vi/XqfTKn87CGk/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 57,
+      "createdAt": "2026-02-05T07:48:02.062Z"
+    },
+    {
+      "titre": "Flash encouragement || Choisissons la bonne part.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=wLeV9U3Jwmg",
+      "thumbnail": "https://i.ytimg.com/vi/wLeV9U3Jwmg/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 58,
+      "createdAt": "2026-02-05T07:48:02.063Z"
+    },
+    {
+      "titre": "Flash encouragement || Le premier et plus grand commandement.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=kMolJx3P48s",
+      "thumbnail": "https://i.ytimg.com/vi/kMolJx3P48s/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 59,
+      "createdAt": "2026-02-05T07:48:02.064Z"
     }
   ],
   "evenements": [],
