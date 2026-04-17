@@ -57,6 +57,9 @@ function renderBooks(books) {
   const container = document.getElementById('books-container');
   const noResults = document.getElementById('no-results');
 
+  // Trier du plus récent au plus ancien
+  books = [...books].sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+
   updateResultsCount(books.length);
 
   if (books.length === 0) {
