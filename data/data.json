@@ -251,6 +251,7 @@
       "pdfUrl": "https://drive.google.com/file/d/1zd4vedmLCo9e6-PawAj5qacUYTJy0Jeq/view?usp=sharing",
       "gratuit": true,
       "id": 18,
+      "carousel": true, 
       "createdAt": "2026-04-17T18:03:55.971Z"
     }
   ],
