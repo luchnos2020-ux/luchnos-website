@@ -832,6 +832,26 @@
       "categorie": "YouTube",
       "id": 59,
       "createdAt": "2026-02-05T07:48:02.064Z"
+    },
+    {
+      "titre": "Cantique || Mon temoignage(2020).",
+      "youtubeUrl": "https://www.youtube.com/watch?v=CjzOOieGZOQ",
+      "thumbnail": "https://i.ytimg.com/vi/CjzOOieGZOQ/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 60,
+      "createdAt": "2026-05-25T10:01:23.369Z"
+    },
+    {
+      "titre": "Cantique || Marche par la Foi(2020).",
+      "youtubeUrl": "https://www.youtube.com/watch?v=saIvJQbRWFU",
+      "thumbnail": "https://i.ytimg.com/vi/saIvJQbRWFU/mqdefault.jpg",
+      "auteur": "LAMPE ALLUMEE (Luchnos)",
+      "description": "Pour plus de détails sur nous et si vous souhaitez télécharger certains de nos livres, veuillez consulter notre site à l'adresse ...",
+      "categorie": "YouTube",
+      "id": 61,
+      "createdAt": "2026-05-25T10:01:23.372Z"
     }
   ],
   "evenements": [],
